@@ -198,6 +198,7 @@ a {
   margin-right: auto;
   border: none;
   display: block;
+  ransition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-button:hover,
 .order-button:focus {
@@ -321,6 +322,7 @@ a {
   width: calc((100% - 72px) / 4);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-name {
@@ -366,18 +368,22 @@ a {
   justify-content: center;
   text-align: center;
 }
+
 .portfolio-overlay-text {
   font-weight: 400;
   font-size: 16px;
-
+  position: absolute;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 296px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  margin-bottom: 164px;
+  top: 0;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+
+  height: 100%;
+  width: 100%;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-titel {
@@ -396,13 +402,20 @@ a {
   column-gap: 24px;
   row-gap: 48px;
 }
+.portfolio-list:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .portfolio-item {
   width: calc((100% - 48px) / 3);
-  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover .portfolio-overlay {
   transform: translateY(0%);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-overlay-text:hover {
+  transform: translateY(0%);
 }
 
 .portfolio-item-container {
